@@ -30,7 +30,7 @@ let pantryContents = {
     chocolateChips: 2000,
   };
   
-  let refrigeratorContents = {
+let refrigeratorContents = {
     eggs: 4,
     baconStrips: 8,
     chocolateChips: 200,
@@ -39,12 +39,33 @@ let pantryContents = {
     onions: 1,
   };
   
-  const numOfPancakesPerBag = 10;
-  const numOfPancakesPeopleEat = 3;
-  const numOfChocChipsPerPancake = 15;
-  const numOfBaconPeopleEat = 3;
-  const numOfEggsPeopleEat = 2;
+const numOfPancakesPerBag = 10;
+const numOfPancakesPeopleEat = 3;
+const numOfChocChipsPerPancake = 15;
+const numOfBaconPeopleEat = 3;
+const numOfEggsPeopleEat = 2;
   
   // You shouldn't need to change anything above this line initially
   // You may change it to test different scenarios, but it should work as is
   
+function breakfastCheck(contents, numOfPeople) {
+    const numOfEggsNeeded = numOfEggsPeopleEat * numOfPeople;
+    const numOfBaconNeeded = numOfBaconPeopleEat * numOfPeople;
+
+    if(
+        contents.eggs >= numOfEggsNeeded &&
+        contents.baconStrips >= numOfBaconNeeded
+    )
+        return true;
+
+    return false;
+    }
+
+  console.log(
+    "Does the fridge have enough ingredients for breakfast?",
+    breakfastCheck(refrigeratorContents, 4));
+    if (breakfastCheck(refrigeratorContents, 4) === true) {
+        console.log ('Yes');
+      } else {
+        console.log ('No');
+      }
