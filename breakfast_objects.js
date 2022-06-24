@@ -24,3 +24,27 @@ The picky eaters might invite some picky friends, but you won't know until secon
 you have to make a decision. Allow the function to accept a second parameter - the total number
 of picky eaters - to allow you to make the calculation at the last second.
 */
+
+let pantryContents = {
+    pancakeMixBags: 1,
+    chocolateChips: 2000,
+  };
+  
+  let refrigeratorContents = {
+    eggs: 4,
+    baconStrips: 8,
+    chocolateChips: 200,
+    cheeseSlices: 6,
+    tomatoes: 1,
+    onions: 1,
+  };
+  
+  const numOfPancakesPerBag = 10;
+  const numOfPancakesPeopleEat = 3;
+  const numOfChocChipsPerPancake = 15;
+  const numOfBaconPeopleEat = 3;
+  const numOfEggsPeopleEat = 2;
+  
+  // You shouldn't need to change anything above this line initially
+  // You may change it to test different scenarios, but it should work as is
+  
