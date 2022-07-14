@@ -57,15 +57,32 @@ function breakfastCheck(contents, numOfPeople) {
         contents.baconStrips >= numOfBaconNeeded
     )
         return true;
+    const numOfPancakesNeeded = numOfPancakesPeopleEat * numOfPeople;
+    const numOfChocChipsNeeded = numOfChocChipsPerPancake * numOfPancakesNeeded;
+      
+    if (
+        contents.pancakeMixBags * numOfPancakesPerBag >= numOfPancakesNeeded &&
+        contents.chocolateChips >= numOfChocChipsNeeded
+        )
+        return true;
 
     return false;
     }
 
-  console.log(
+console.log(
     "Does the fridge have enough ingredients for breakfast?",
     breakfastCheck(refrigeratorContents, 4));
     if (breakfastCheck(refrigeratorContents, 4) === true) {
         console.log ('Yes');
-      } else {
+    } else {
         console.log ('No');
-      }
+          }
+    
+console.log(
+    "Does the pantry have enough ingredients for breakfast?",
+    breakfastCheck(pantryContents, 1));
+    if (breakfastCheck(pantryContents, 1) === true) {
+        console.log ('Yes');
+    } else {
+        console.log ('No');
+    }
